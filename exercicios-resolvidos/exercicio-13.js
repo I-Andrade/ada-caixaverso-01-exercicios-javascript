@@ -4,8 +4,6 @@
  cada segundo e exibe o valor no console.
 
 */
-let modoTeste = false;
-
 function contadorInterval() {
      let contador = 1;
     const intervalo = setInterval(() => {
@@ -16,9 +14,5 @@ function contadorInterval() {
     return intervalo; // Retorna o ID do intervalo para possível uso posterior
 }
 
-export function exercicio13ContadorInterval() {
-    return contadorInterval();
-}
-
-// Exemplo de uso:
-if (modoTeste) contadorInterval();
+// Só executa se este arquivo for o principal (executado diretamente)
+contadorInterval();

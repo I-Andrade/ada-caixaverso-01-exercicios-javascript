@@ -5,15 +5,22 @@
 
 */
 
-import { exercicio13ContadorInterval } from './exercicio-13.js';
+function contadorInterval() {
+     let contador = 1;
+    const intervalo = setInterval(() => {
+        console.log(contador);
+        contador++;
+        if (contador > 10) clearInterval(intervalo);
+    }, 1000);
+    return intervalo; // Retorna o ID do intervalo para possível uso posterior
+}
 
 function pararContador(intervalo) {
     clearInterval(intervalo);
 }
 
 // Exemplo de uso:
-const meuContador = exercicio13ContadorInterval(); // Importado do exercício 13
-
+const meuContador = contadorInterval();
 // Aguardar 5 segundos antes de parar o contador
 setTimeout(() => {  
     pararContador(meuContador);

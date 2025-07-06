@@ -11,3 +11,8 @@ function gerarNumerosAleatorios() {
 
 // Exemplo de uso:
 const intervalo = gerarNumerosAleatorios();
+
+setTimeout(() => {
+    clearInterval(intervalo);
+    console.log("Execução interrompida.");
+}, 2000);

@@ -32,7 +32,10 @@ function fetchData(url) {
 fetchData("https://pokeapi.co/api/v2/pokemon/ditto")
     .then((dados) => {
         console.log(JSON.stringify(dados,null,2));
+
+    console.log("Acima o json retornado pela API.   ^^^^^^^^^");
     })
     .catch((error) => {
         console.error("Erro ao buscar dados:", error);
     });
+

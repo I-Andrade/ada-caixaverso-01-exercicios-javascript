@@ -13,7 +13,7 @@ function intervaloPersonalizado(funcao, intervalo) {
     if (typeof intervalo !== 'number' || intervalo <= 0)
         throw new Error("O segundo argumento deve ser um número positivo.");
 
-    setInterval(funcao, intervalo);
+    return setInterval(funcao, intervalo);
 }
 
 // Exemplo de uso:
@@ -21,4 +21,9 @@ function minhaFuncao() {
     console.log("Função executada a cada intervalo especificado!");
 }
 
-intervaloPersonalizado(minhaFuncao, 1);
+const interval = intervaloPersonalizado(minhaFuncao, 1);
+
+setTimeout(() => {
+    clearInterval(interval);
+    console.log("Execução interrompida.");
+}, 2000);
