@@ -6,12 +6,12 @@ soma de todos os elementos.
 
 */
 
-function sumArray(numbers) {
+function somaArray(numbers) {
     return numbers.reduce((acc, curr) => acc + curr, 0);
 }
 
 
 // Exemplo de uso:
 const numbers = [1, 2, 3, 4, 5];
-const result = sumArray(numbers);
+const result = somaArray(numbers);
 console.log(result); // Saída: 15

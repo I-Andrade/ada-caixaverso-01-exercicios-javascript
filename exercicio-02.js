@@ -5,11 +5,11 @@ array de números e retorna o maior número.
 
 */
 
-function maxNumberArray(numbers) {
+function maiorNumero(numbers) {
     return Math.max(...numbers);
 }
 
 // Exemplo de uso:
 const numbers = [1, 2, 6, 4, 3];
-const result = maxNumberArray(numbers);
+const result = maiorNumero(numbers);
 console.log(result); // Saída: 6
